@@ -14,9 +14,9 @@
   "scripts": {
     "dev": "turbo dev",
     "dev:testnet": "dotenv -v NEXT_PUBLIC_IS_TESTNET=true -- yarn dev",
-    "start": "turbo start",
+    "start": "dotenv -v NEXT_PUBLIC_IS_TESTNET=true -- yarn start",
     "start:testnet": "dotenv -v NEXT_PUBLIC_IS_TESTNET=true -- yarn start",
-    "build": "turbo build",
+    "build": "dotenv -v NEXT_PUBLIC_IS_TESTNET=true -- yarn build",
     "build:testnet": "dotenv -v NEXT_PUBLIC_IS_TESTNET=true -- yarn build",
     "build:libs": "turbo build --parallel --filter @osmosis-labs/math --filter @osmosis-labs/pools --filter @osmosis-labs/stores",
     "build:clean": "yarn clean && yarn install --frozen-lockfile && yarn build",
